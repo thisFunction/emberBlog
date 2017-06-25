@@ -1,61 +1,82 @@
 @import "./blog.less";
 
-.img {
-    z-index:9999;
-}
+html,
 body {
     font-family: lekton, monospace;
-    width: 100vw;
-    height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
-.heading {
-    font-family: passion-one, sans-serif;
-}
-
-section {
-    padding: 3em;
+.wrapper {
     box-sizing: border-box;
-    width: 100%;
     height: 100vh;
+    position: relative;
     background: #212020;
     
+    .index {
+        height: 100vh;
+    }
     header {
-        position: absolute;
-        width: 280px;
-        height: 280px;
-        top: ~"calc(50% - 140px)";
-        left: ~"calc(50% - 140px)";
-        color: #efefef;
-        font-size: 35px;
-        background: indianred;
-        transform: rotate(45deg);
-        transition: transform .7s;
-         display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        &:hover {
-            cursor: pointer;
-            transform: rotate(0deg);
-            transition: all .7s;
-            color: #efefef;
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            top: ~"calc(50% - 140px)";
+            left: ~"calc(50% - 140px)";
+            color: #fff;
+            font-size: 35px;
             background: indianred;
-        }
-        
-        .logo-text {
-            transform: rotate(-45deg);
+            transform: rotate(45deg);
             transition: transform .7s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+                transform: rotate(0deg);
+                transition: all .7s;
+                color: #efefef;
+                background: indianred;
+            }
+
+            .logo-text {
+                transform: rotate(-45deg);
+                transition: transform .7s;
+            }
+
+            &:hover .logo-text {
+                transform: rotate(0deg);
+                transition: transform .7s;
+            }
         }
 
-        &:hover .logo-text {
-            transform: rotate(0deg);
-            transition: transform .7s;
-        }
+}
+
+a {
+    color: indianred;
+    text-decoration: none;
+    
+    &:hover {
+        color: lighten(indianred, 10%)
     }
 }
 
-section:nth-of-type(2) {
-    background: white;
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    
+    ul {
+        max-width: 800px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+        li {
+            margin-left: 30px;
+        }
+    }
 }
