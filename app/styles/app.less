@@ -1,0 +1,61 @@
+@import "./blog.less";
+
+.img {
+    z-index:9999;
+}
+body {
+    font-family: lekton, monospace;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.heading {
+    font-family: passion-one, sans-serif;
+}
+
+section {
+    padding: 3em;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background: #212020;
+    
+    header {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        top: ~"calc(50% - 140px)";
+        left: ~"calc(50% - 140px)";
+        color: #efefef;
+        font-size: 35px;
+        background: indianred;
+        transform: rotate(45deg);
+        transition: transform .7s;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover {
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: all .7s;
+            color: #efefef;
+            background: indianred;
+        }
+        
+        .logo-text {
+            transform: rotate(-45deg);
+            transition: transform .7s;
+        }
+
+        &:hover .logo-text {
+            transform: rotate(0deg);
+            transition: transform .7s;
+        }
+    }
+}
+
+section:nth-of-type(2) {
+    background: white;
+}
