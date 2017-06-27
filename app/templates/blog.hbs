@@ -3,6 +3,14 @@
         {{#link-to "index" tagName="header" class="header-link"}}
             <span class="logo-text">thisFunction</span>
         {{/link-to}}
+        <div class="blog-entries">
+            {{blog-entry-titles}}
+        </div>
+        
     </section>
-    <section class="right">{{outlet}}</section>
+    <section class="right">
+        <div class="right-content-wrapper">
+            {{outlet}}
+        </div>
+    </section>
 </section>
